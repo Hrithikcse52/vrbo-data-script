@@ -100,28 +100,17 @@ async function main() {
           });
         }
         csvdata.push(list);
-
-        // return {
-        //   listingId: listing.listingId,
-        //   listingNumber: listing.listingNumber,
-        //   name: listing.propertyMetadata.headline,
-        //   rate: {
-        //     beginDate,
-        //     endDate: listing.rateSummary.endDate,
-        //     rentNights: ratelist,
-        //   },
-        // };
       });
-      console.log("header", header);
-      //   csvdata.unshift(header);
-      console.log("csvdata", csvdata);
+      // console.log("header", header);
+
+      // console.log("csvdata", csvdata);
       const writableStream = fs.createWriteStream("test.csv");
       const stringifier = stringify({ header: true, columns: header });
       csvdata.forEach((csv) => {
         stringifier.write(csv);
       });
       stringifier.pipe(writableStream);
-      console.log("file created");
+      console.log("file created!!!");
     }
   } else {
     console.log("something is missing !");
