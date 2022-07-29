@@ -1,0 +1,17 @@
+{
+  "name": "pricelabs-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": " node src/index.js  --q='500 W Madison St Chicago IL 60607' --page=50"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "csv": "^6.2.0",
+    "date-fns": "^2.29.1",
+    "yargs": "^17.5.1"
+  }
+}
